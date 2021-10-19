@@ -6,9 +6,9 @@ class AI extends Player {
     this.name = name
   }
 
-  ai() {
-    this.ai = new AI('Mr. Roboto')
-  }
+  // ai() {
+  //   this.ai = new AI('Mr. Roboto')
+  // }
 
   computerChoice() {
     let rand = Math.floor(Math.random() * 5)
@@ -19,8 +19,8 @@ class AI extends Player {
 }
 
 // testing the random number generator
-let asdf = new AI('maggy')
-asdf.computerChoice()
+// let asdf = new AI('maggy')
+// asdf.computerChoice()
 
 module.exports = {
   AI: AI
