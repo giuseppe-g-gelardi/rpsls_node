@@ -1,4 +1,4 @@
-const { Player } = require('./Player')
+const { Player } = require('./player')
 
 class AI extends Player {
   constructor(name) {
