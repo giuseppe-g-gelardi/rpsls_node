@@ -12,8 +12,6 @@ class AI extends Player {
 
   computerChoice() {
     let rand = Math.floor(Math.random() * 5)
-    // console.log(rand)
-
     let opponentMove = this.playerMoves[rand]
     console.log(this.playerMoves)
     console.log(opponentMove)
