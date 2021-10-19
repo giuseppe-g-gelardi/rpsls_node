@@ -24,8 +24,8 @@ class Human extends Player {
   }
 }
 
-let player1 = new Human('player')
-player1.gestures()
+// let player1 = new Human('player')
+// player1.gestures()
 
 module.exports ={
   Human: Human
