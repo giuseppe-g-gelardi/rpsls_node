@@ -1,9 +1,9 @@
 const prompt = require('prompt-sync')()
 
 class Player {
-  constructor(name, score) {
+  constructor(name) {
     this.name = name
-    this.score = score
+    this.score = 0
     this.playerMoves = ['rock', 'paper', 'scissors', 'lizard', 'spock']
 
   }

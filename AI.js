@@ -10,11 +10,20 @@ class AI extends Player {
   //   this.ai = new AI('Mr. Roboto')
   // }
 
-  computerChoice() {
+  // computerChoice() {
+  //   let rand = Math.floor(Math.random() * 5)
+  //   let opponentMove = this.playerMoves[rand]
+  //   console.log(this.playerMoves)
+  //   console.log(opponentMove)
+  // }
+
+  gestures() {
     let rand = Math.floor(Math.random() * 5)
-    let opponentMove = this.playerMoves[rand]
-    console.log(this.playerMoves)
-    console.log(opponentMove)
+    let choice = this.playerMoves[rand]
+    // console.log(this.playerMoves)
+    // console.log(choice)
+
+    console.log(`player picked ${choice}`)
   }
 }
 

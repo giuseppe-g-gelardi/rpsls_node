@@ -12,13 +12,13 @@ class Human extends Player {
     console.log('please choose: rock, paper, scissors, lizard or spock')
     let playerChoice = prompt()
     
-    let player1move = this.playerMoves.find(move => move === playerChoice.toLowerCase())
+    let choice = this.playerMoves.find(move => move === playerChoice.toLowerCase())
 
-    if (player1move === undefined) {
+    if (choice === undefined) {
       console.log('invalid choice, please try again')
       player1.gestures()
     } else {
-      console.log(player1move)
+      console.log(choice)
     }
 
   }
