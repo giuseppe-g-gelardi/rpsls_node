@@ -5,7 +5,7 @@ class Player {
     this.name = name
     this.score = 0
     this.playerMoves = ['rock', 'paper', 'scissors', 'lizard', 'spock']
-
+    this.choice;
   }
 }
 
