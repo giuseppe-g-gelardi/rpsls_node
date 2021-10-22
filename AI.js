@@ -5,10 +5,6 @@ class AI extends Player {
     super(name)
   }
 
-  // ai() {
-  //   this.ai = new AI('Mr. Roboto')
-  // }
-
   gestures() {
     let rand = Math.floor(Math.random() * 5)
     this.choice = this.playerMoves[rand]

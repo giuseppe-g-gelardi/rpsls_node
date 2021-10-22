@@ -42,31 +42,44 @@ class Game {
       this.player1.gestures()
       this.player2.gestures()
 
-      if (this.player1.choice === this.player2.choice) {
-        console.log('tie! play again!')
-      } else if 
-       (((this.player1.choice === 'rock') && (this.player2.choice === 'scissors' || this.player2.choice === 'lizard')) ||
-        ((this.player1.choice === 'scissors') && (this.player2.choice === 'paper' || this.player2.choice === 'lizard')) ||
-        ((this.player1.choice === 'paper') && (this.player2.choice === 'rock' || this.player2.choice === 'spock')) ||
-        ((this.player1.choice === 'lizard') && (this.player2.choice === 'spock' || this.player2.choice === 'paper')) ||
-        ((this.player1.choice === 'spock') && (this.player2.choice === 'scissors' || this.player2.choice === 'rock'))) {
-          this.player1.score += 1
-          console.log(`${this.player1.choice} beats! ${this.player2.choice}. Player 1 wins!`)
-          console.log(`score is Player 1: ${this.player1.score}, Player 2: ${this.player2.score}`)
-          this.gestureCompare()
-      } else {
-          this.player2.score += 1
-          console.log(`${this.player2.choice} beats! ${this.player1.choice}. Player 2 wins!`)
-          console.log(`score is Player 1: ${this.player1.score}, Player 2: ${this.player2.score}`)
-      }
+      this.gestureDecision()
+
+      
+    }
+  }
+
+  gestureDecision() {
+
+    if (this.player1.choice === this.player2.choice) {
+      console.log('tie! play again!')
+    } else if 
+      (
+      ((this.player1.choice === 'rock') && (this.player2.choice === 'scissors' || this.player2.choice === 'lizard')) ||
+      ((this.player1.choice === 'scissors') && (this.player2.choice === 'paper' || this.player2.choice === 'lizard')) ||
+      ((this.player1.choice === 'paper') && (this.player2.choice === 'rock' || this.player2.choice === 'spock')) ||
+      ((this.player1.choice === 'lizard') && (this.player2.choice === 'spock' || this.player2.choice === 'paper')) ||
+      ((this.player1.choice === 'spock') && (this.player2.choice === 'scissors' || this.player2.choice === 'rock'))
+      ) {
+        this.player1.score += 1
+        console.clear()
+        console.log(`${this.player1.choice} beats ${this.player2.choice}!. Player 1 wins!`)
+        console.log(`score is Player 1: ${this.player1.score}, Player 2: ${this.player2.score}`)
+        this.gestureCompare()
+    } else {
+        this.player2.score += 1
+        console.clear()
+        console.log(`${this.player2.choice} beats ${this.player1.choice}!. Player 2 wins!`)
+        console.log(`score is Player 1: ${this.player1.score}, Player 2: ${this.player2.score}`)
     }
   }
 
   outcome() {
     if (this.player1.score === 3 || this.player2.score === 3) {
       if (this.player1.score > this.player2.score) {
+        console.clear()
         console.log('player 1 wins')
       } else {
+        console.clear()
         console.log('player 2 wins')
       }
     }
@@ -110,5 +123,3 @@ module.exports = {
   Game: Game
 }
 
-  // if p1 === rock && p2 liz
-  // p1 win sections and p2 win sections 
